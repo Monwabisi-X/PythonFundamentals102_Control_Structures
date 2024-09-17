@@ -25,10 +25,12 @@ Exercise: Conditional Statements
 In this exercise, you will use conditional statements to check if a year is a leap year.
 """
 
-
-year = 0000
-
-
+year = input("Enter Year: ")#0000
+year_int = int(year)
+if year_int % 4 == 0:
+    print(str(year_int) + ", is a leap year.")
+if year_int % 100 == 0 and year_int % 400 != 0:
+    print(str(year_int) + ", is not a leap year.")
 
 """
 Exercise: Loops
@@ -70,7 +72,7 @@ limit_int = int(limit_str)
 # 3. Inside the loop, use a loop control statement to skip even numbers and print odd numbers.
 # Fill in the code to achieve the goal:
 
-for number in range(1, limit_int):
+for number in range(1, limit_int + 1):
     # Add code to check if number is odd and print odd numbers
     if number % 2 == 0:
         pass
